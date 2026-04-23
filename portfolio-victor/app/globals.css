@@ -24,3 +24,37 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+html, body {
+  background-color: #0a0a0a;
+  color: #ffffff;
+}
+
+@keyframes scrollWheel {
+  0% {
+    transform: translateY(2px);
+    background-color: white;
+  }
+
+  25% {
+    background-color: #868686; /* cinza claro */
+  }
+
+  50% {
+    transform: translateY(31px);
+    background-color: white;
+  }
+
+  75% {
+    background-color: #868686;
+  }
+
+  100% {
+    transform: translateY(2px);
+    background-color: white;
+  }
+}
+
+.animate-scroll-wheel {
+  animation: scrollWheel 3.2s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
