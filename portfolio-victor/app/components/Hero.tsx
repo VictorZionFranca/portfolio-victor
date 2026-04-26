@@ -79,14 +79,14 @@ export default function Hero() {
         </div>
 
         {/* animação */}
-        <div className="relative min-h-50 flex items-center justify-center">
+        <div className="relative min-h-50 flex items-start md:items-center justify-center">
           <TypingCode />
         </div>
 
       </div>
 
       {/* scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center">
+        <div className="absolute bottom-1 md:bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center">
 
         <div className="w-7 h-12 border-2 border-zinc-600 rounded-full relative overflow-hidden flex justify-center">
 
