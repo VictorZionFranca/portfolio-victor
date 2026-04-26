@@ -14,19 +14,34 @@ export default function Projects() {
         {/* projeto */}
         <div className="space-y-10">
 
-          {/* imagem */}
-          <div className="w-full h-75 md:h-100 bg-zinc-900 rounded-2xl overflow-hidden relative">
+          {/* imagem com hover */}
+          <div className="group relative w-full rounded-2xl overflow-hidden">
 
             <Image
-                src="/watt-som.png"
-                alt="Projeto Watt Som"
-                fill
-                className="object-cover"
-                priority
+              src="/images/wattsom.png"
+              alt="Projeto Watt Som"
+              width={1200}
+              height={800}
+              className="w-full h-auto object-contain transition duration-500 group-hover:scale-[1.02]"
+              priority
             />
 
-          </div>
+            {/* overlay */}
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition duration-500 flex items-center justify-center">
 
+              {/* botão */}
+              <a
+                href="https://www.wattsomeacessorios.com.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition duration-500 px-6 py-3 rounded-full bg-white text-black text-sm font-medium"
+              >
+                Ver Projeto
+              </a>
+
+            </div>
+
+          </div>
 
           {/* conteúdo */}
           <div className="grid md:grid-cols-2 gap-10">
@@ -34,7 +49,7 @@ export default function Projects() {
             {/* texto */}
             <div>
               <h3 className="text-3xl font-semibold mb-4">
-                Watt Som
+                Watt Som e Acessórios
               </h3>
 
               <p className="text-zinc-400 leading-relaxed">
@@ -53,16 +68,18 @@ export default function Projects() {
                 </p>
 
                 <p className="text-zinc-300">
-                  React · Next.js · Firebase · Tailwind
+                  React · Next.js · Tailwind
                 </p>
               </div>
 
               <div className="mt-6">
                 <a
-                  href="#"
+                  href="https://www.wattsomeacessorios.com.br/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-block text-sm border border-zinc-700 px-6 py-3 rounded-full hover:bg-white hover:text-black transition"
                 >
-                  Ver projeto
+                  Ver Projeto
                 </a>
               </div>
 

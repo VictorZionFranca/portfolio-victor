@@ -14,7 +14,7 @@ export default function Hero() {
 
         <div className="flex gap-6 text-zinc-500">
           <a
-            href="https://github.com/seuusuario"
+            href="https://github.com/VictorZionFranca"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white transition duration-300 hover:-translate-y-0.5"
@@ -23,7 +23,7 @@ export default function Hero() {
           </a>
 
           <a
-            href="https://instagram.com/seuusuario"
+            href="https://www.instagram.com/vic.zion"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white transition duration-300 hover:-translate-y-0.5"
@@ -32,7 +32,7 @@ export default function Hero() {
           </a>
 
           <a
-            href="https://wa.me/seunumero"
+            href="https://wa.me/47984509831"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white transition duration-300 hover:-translate-y-0.5"
@@ -47,11 +47,13 @@ export default function Hero() {
       <h1 className="text-[70px] md:text-[120px] lg:text-[150px] font-semibold tracking-tight leading-[0.9]">
         VICTOR
         <br />
+        ZION
+        <br />
         FRANÇA
       </h1>
 
       {/* linha */}
-      <div className="border-t border-zinc-800/60 my-12"></div>
+      <div className="border-t border-zinc-800/60 my-10"></div>
 
       {/* conteúdo */}
       <div className="grid md:grid-cols-2 gap-10 items-start">

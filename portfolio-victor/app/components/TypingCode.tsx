@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const text = "<code/>";
+const text = "<html/>";
 
 export default function TypingCode() {
   const [displayed, setDisplayed] = useState("");
