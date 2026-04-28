@@ -74,9 +74,10 @@ export default function Projects() {
               </h3>
 
               <p className="text-zinc-400 leading-relaxed text-sm md:text-base">
-                Sistema completo para gestão de serviços e clientes
-                no segmento de som automotivo, desenvolvido com foco
-                em usabilidade, performance e organização de processos.
+                Projeto desenvolvido para uma empresa de som automotivo com foco em presença
+                digital e geração de contatos. O site apresenta os serviços oferecidos,
+                destaca trabalhos realizados e direciona os clientes diretamente para o
+                WhatsApp, facilitando o atendimento e a solicitação de orçamentos.
               </p>
             </div>
 
