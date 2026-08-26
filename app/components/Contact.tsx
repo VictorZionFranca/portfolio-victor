@@ -10,7 +10,7 @@ export default function Contact() {
         <div className="text-center mb-16">
 
           <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mb-6">
-            Vamos trabalhar juntos?
+            Vamos trabalhar juntos ?
           </h2>
 
           <p className="text-zinc-400 text-base md:text-lg max-w-xl mx-auto mb-10">
