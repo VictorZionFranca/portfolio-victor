@@ -3,7 +3,7 @@ import TypingCode from "./TypingCode";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen px-6 md:px-10 lg:px-16 pt-10">
+    <section className="relative min-h-screen px-6 md:px-10 lg:px-16 pt-10 select-none cursor-default">
 
       {/* header minimal */}
       <div className="flex justify-between items-center mb-20">

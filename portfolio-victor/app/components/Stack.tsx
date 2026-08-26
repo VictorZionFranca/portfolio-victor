@@ -1,14 +1,46 @@
 "use client";
 
 import { useState } from "react";
-import { FaReact, FaDatabase } from "react-icons/fa";
-import { SiNextdotjs, SiTypescript, SiFirebase } from "react-icons/si";
+import { FaReact, FaDatabase, FaGitAlt } from "react-icons/fa";
+import {
+  SiNextdotjs,
+  SiTypescript,
+  SiFirebase,
+  SiDotnet,
+  SiHtml5,
+  SiCss,
+  SiJavascript,
+  SiTailwindcss,
+} from "react-icons/si";
 
 type Tech = {
   name: string;
   icon: React.ReactNode;
   desc: string;
 };
+
+const fundamentalsTechs: Tech[] = [
+  {
+    name: "HTML5",
+    icon: <SiHtml5 size={48} />,
+    desc: "Estrutura semântica e acessível para a web.",
+  },
+  {
+    name: "CSS3",
+    icon: <SiCss size={48} />,
+    desc: "Estilização responsiva e layouts modernos.",
+  },
+  {
+    name: "JavaScript",
+    icon: <SiJavascript size={48} />,
+    desc: "Lógica, interatividade e manipulação do DOM.",
+  },
+  {
+    name: "Git",
+    icon: <FaGitAlt size={48} />,
+    desc: "Versionamento de código e controle de mudanças.",
+  },
+];
 
 const frontendTechs: Tech[] = [
   {
@@ -26,9 +58,19 @@ const frontendTechs: Tech[] = [
     icon: <SiTypescript size={48} />,
     desc: "Código mais seguro, escalável e organizado.",
   },
+  {
+    name: "Tailwind CSS",
+    icon: <SiTailwindcss size={48} />,
+    desc: "Estilização rápida com classes utilitárias.",
+  },
 ];
 
 const backendTechs: Tech[] = [
+  {
+    name: "C#",
+    icon: <SiDotnet size={48} />,
+    desc: "Desenvolvimento backend moderno com .NET.",
+  },
   {
     name: "Firebase",
     icon: <SiFirebase size={48} />,
@@ -47,6 +89,7 @@ const backendTechs: Tech[] = [
 ];
 
 export default function Stack() {
+  const [activeFundamentals, setActiveFundamentals] = useState<number | null>(null);
   const [activeFront, setActiveFront] = useState<number | null>(null);
   const [activeBack, setActiveBack] = useState<number | null>(null);
 
@@ -55,7 +98,7 @@ export default function Stack() {
     active: number | null,
     setActive: React.Dispatch<React.SetStateAction<number | null>>
   ) => (
-    <div className="flex gap-8 overflow-hidden p-8">
+    <div className="flex gap-8 overflow-hidden p-8 flex-wrap">
 
       {techs.map((tech, index) => {
         const isActive = active === index;
@@ -66,9 +109,11 @@ export default function Stack() {
             onMouseEnter={() => setActive(index)}
             onMouseLeave={() => setActive(null)}
             className={`
-              flex-1 border border-zinc-800 rounded-2xl p-10
+              flex-1 min-w-60
+              border border-zinc-800 rounded-2xl p-10
               transition-all duration-500 ease-out
               relative overflow-hidden
+              select-none cursor-default
 
               ${
                 isActive
@@ -77,15 +122,6 @@ export default function Stack() {
               }
 
               ${active !== null && !isActive ? "opacity-40" : ""}
-
-              ${active === 0 && index === 1 ? "translate-x-4" : ""}
-              ${active === 0 && index === 2 ? "translate-x-6" : ""}
-
-              ${active === 2 && index === 1 ? "-translate-x-4" : ""}
-              ${active === 2 && index === 0 ? "-translate-x-6" : ""}
-
-              ${active === 1 && index === 0 ? "-translate-x-4" : ""}
-              ${active === 1 && index === 2 ? "translate-x-4" : ""}
             `}
           >
 
@@ -99,11 +135,11 @@ export default function Stack() {
               `}
             >
 
-              <div className="text-zinc-300 mb-5">
+              <div className="text-zinc-300 mb-5 pointer-events-none">
                 {tech.icon}
               </div>
 
-              <p className="text-zinc-200 text-xl font-medium">
+              <p className="text-zinc-200 text-xl font-medium pointer-events-none">
                 {tech.name}
               </p>
 
@@ -116,6 +152,7 @@ export default function Stack() {
                 className={`
                   text-sm text-zinc-500 text-center
                   transition-all duration-500
+                  pointer-events-none
 
                   ${
                     isActive
@@ -137,13 +174,19 @@ export default function Stack() {
   );
 
   return (
-    <section className="px-5 md:px-10 lg:px-16 py-20 md:py-24 overflow-x-hidden">
+    <section className="px-5 md:px-10 lg:px-16 py-20 md:py-24 overflow-x-hidden select-none cursor-default">
 
       <div className="max-w-6xl mx-auto">
 
         <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mb-12">
           Tecnologias
         </h2>
+
+        {/* FUNDAMENTOS */}
+        <div className="mb-16">
+          <h3 className="text-zinc-500 mb-6">Fundamentos</h3>
+          {renderCards(fundamentalsTechs, activeFundamentals, setActiveFundamentals)}
+        </div>
 
         {/* FRONTEND */}
         <div className="mb-16">

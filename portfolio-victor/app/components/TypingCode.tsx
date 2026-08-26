@@ -62,7 +62,7 @@ export default function TypingCode() {
   }, [index, phase, blinkCount, displayed]);
 
   return (
-    <span className="text-[80px] md:text-[120px] font-semibold text-zinc-600">
+    <span className="text-[80px] md:text-[120px] font-semibold text-zinc-600 select-none cursor-default">
       {displayed}
       <span
         className={`ml-1 transition-opacity duration-200 ${
